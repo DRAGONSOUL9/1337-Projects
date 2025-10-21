@@ -6,7 +6,7 @@
 /*   By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 11:31:12 by oel--mou          #+#    #+#             */
-/*   Updated: 2025/10/19 11:35:09 by oel--mou         ###   ########.fr       */
+/*   Updated: 2025/10/21 15:59:18 by oel--mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*str;
 	unsigned char	x;
 
-	if (!s)
-		return (NULL);
 	i = 0;
 	str = (unsigned char *)s;
 	x = (unsigned char)c;
