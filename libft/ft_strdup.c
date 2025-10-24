@@ -6,7 +6,7 @@
 /*   By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 18:22:29 by oel--mou          #+#    #+#             */
-/*   Updated: 2025/10/20 16:19:58 by oel--mou         ###   ########.fr       */
+/*   Updated: 2025/10/22 09:38:41 by oel--mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 char	*ft_strdup(const char *s)
 {
+	size_t	i;
 	size_t	size;
 	char	*copy;
 
@@ -21,7 +22,12 @@ char	*ft_strdup(const char *s)
 	copy = malloc(size + 1);
 	if (!copy)
 		return (NULL);
-	ft_memcpy(copy, s, size);
-	copy[size] = '\0';
+	i = 0;
+	while (i < size)
+	{
+		copy[i] = s[i];
+		i++;
+	}
+	copy[i] = '\0';
 	return (copy);
 }

@@ -6,7 +6,7 @@
 #    By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 18:29:25 by oel--mou          #+#    #+#              #
-#    Updated: 2025/10/19 11:40:16 by oel--mou         ###   ########.fr        #
+#    Updated: 2025/10/24 08:43:51 by oel--mou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,19 +20,19 @@ SRC2 = ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c f
 B_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c\
 		ft_lstiter.c ft_lstmap.c
 OBJ = $(SRC:.c=.o) $(SRC2:.c=.o)
-B_OBJ = $(OBJ) $(B_SRC:.c=.o)
+B_OBJ = $(B_SRC:.c=.o)
 NAME = libft.a
 
+$(NAME): $(OBJ)
+	ar -crs $(NAME) $(OBJ)
+	
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	ar -crs $@ $(OBJ)
-	
 bonus: $(B_OBJ)
 	ar -crs $(NAME) $(B_OBJ)
 
 %.o : %.c
-	$(CC) $(FLG) -c -g $< -o $@
+	$(CC) $(FLG) -c $< -o $@
 	
 clean:
 	rm -rf $(OBJ) $(B_OBJ)
@@ -41,3 +41,5 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
+
+.PHONY: all bonus clean fclean re

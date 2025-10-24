@@ -6,7 +6,7 @@
 /*   By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 09:55:38 by oel--mou          #+#    #+#             */
-/*   Updated: 2025/10/20 16:41:29 by oel--mou         ###   ########.fr       */
+/*   Updated: 2025/10/23 09:04:38 by oel--mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,22 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
+	size_t			i;
 	char			*tmp;
+	unsigned char	*str;
 	unsigned char	x;
 
+	i = 0;
 	tmp = NULL;
+	str = (unsigned char *)s;
 	x = (unsigned char)c;
-	while (*s)
+	while (str[i])
 	{
-		if ((unsigned char)*s == x)
-			tmp = (char *)s;
-		s++;
+		if (str[i] == x)
+			tmp = (char *)&str[i];
+		i++;
 	}
-	if ((unsigned char)*s == x)
-		return ((char *)s);
+	if (str[i] == x)
+		return ((char *)&str[i]);
 	return (tmp);
 }

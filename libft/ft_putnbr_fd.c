@@ -6,7 +6,7 @@
 /*   By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 10:12:44 by oel--mou          #+#    #+#             */
-/*   Updated: 2025/10/17 11:39:29 by oel--mou         ###   ########.fr       */
+/*   Updated: 2025/10/22 11:33:45 by oel--mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	if (fd < 0)
 		return ;
-	if (n == INT_MIN)
+	if (n == -2147483648)
 	{
 		ft_putstr_fd("-2147483648", fd);
 		return ;
