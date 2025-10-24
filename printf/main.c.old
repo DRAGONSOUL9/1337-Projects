@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 09:56:09 by oel--mou          #+#    #+#             */
-/*   Updated: 2025/10/24 10:12:37 by oel--mou         ###   ########.fr       */
+/*   Created: 2025/10/24 10:13:33 by oel--mou          #+#    #+#             */
+/*   Updated: 2025/10/24 10:40:55 by oel--mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
+#include <stdio.h>
 
-size_t	ft_putchar_fd(char c, int fd)
+int	main(void)
 {
-	if (fd < 0)
-		return (-1);
-	return (write(fd, &c, 1));
+    int mine;
+    int std;
+    
+	std = printf("printf    : %%c %%c %c | ", 'c');
+    fflush(stdout);
+    printf("printf return    : %d\n",std);
+	mine = ft_printf("ft_printf : %%c %%c %c | ", 'c');
+    fflush(stdout);
+    printf("ft_printf return : %d\n",mine);
 }

@@ -6,7 +6,7 @@
 /*   By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 09:59:42 by oel--mou          #+#    #+#             */
-/*   Updated: 2025/10/19 16:30:52 by oel--mou         ###   ########.fr       */
+/*   Updated: 2025/10/24 10:57:06 by oel--mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 size_t	ft_putstr_fd(char *s, int fd)
 {
-	if (!s || fd < 0)
+	if (!s)
+		return (write(fd, "(null)", 6));
+	if (fd < 0)
 		return (0);
 	return (write(fd, s, ft_strlen(s)));
 }
