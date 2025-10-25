@@ -6,7 +6,7 @@
 #    By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 18:29:25 by oel--mou          #+#    #+#              #
-#    Updated: 2025/10/24 08:43:51 by oel--mou         ###   ########.fr        #
+#    Updated: 2025/10/24 15:17:05 by oel--mou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,4 +42,5 @@ fclean: clean
 
 re: fclean all
 
+.SECONDARY: $(OBJ) $(B_OBJ)
 .PHONY: all bonus clean fclean re

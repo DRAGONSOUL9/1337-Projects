@@ -178,5 +178,10 @@ int	main(void)
     ret_std = printf("printf   : |%x| |%x|\n", -1, 255);
     ret_ft  = ft_printf("ft_printf: |%x| |%x|\n", -1, 255);
     printf("return printf=%d | ft_printf=%d\n\n", ret_std, ret_ft);
+
+    ret_std = printf(NULL);
+    ret_ft  = ft_printf(NULL);
+    printf("return printf=%d | ft_printf=%d\n\n", ret_std, ret_ft);
+    
 	return (0);
 }
