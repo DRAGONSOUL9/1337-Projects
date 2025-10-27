@@ -6,13 +6,13 @@
 /*   By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 10:43:02 by oel--mou          #+#    #+#             */
-/*   Updated: 2025/10/24 11:11:34 by oel--mou         ###   ########.fr       */
+/*   Updated: 2025/10/27 15:13:30 by oel--mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
+#include "ft_printf.h"
 
-int	ft_putnbr_base(long long n, int base, char *base_str)
+int	ft_putnbr_base(unsigned int n, int base, char *base_str)
 {
 	int	printed;
 
