@@ -6,7 +6,7 @@
 /*   By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 09:14:06 by oel--mou          #+#    #+#             */
-/*   Updated: 2025/11/17 09:56:26 by oel--mou         ###   ########.fr       */
+/*   Updated: 2025/11/25 15:19:12 by oel--mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,11 @@ char	*get_next_line(int fd)
 		tmp = ft_strdup_size(&left[final_size], 0, 1);
 		free(left);
 		left = tmp;
+		if (left && left[0] == '\0')
+		{
+			free(left);
+			left = NULL;
+		}
 		return (result);
 	}
 	free(left);
