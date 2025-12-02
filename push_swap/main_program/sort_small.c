@@ -6,17 +6,16 @@
 /*   By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 17:41:35 by oel--mou          #+#    #+#             */
-/*   Updated: 2025/11/24 18:23:30 by oel--mou         ###   ########.fr       */
+/*   Updated: 2025/12/01 10:39:56 by oel--mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "push_swap.h"
 
 static void	ft_finish(t_push **a, t_push **b, int lstsize)
 {
-	int	p;
-	int	tmp;
+	int		p;
+	int		tmp;
 
 	tmp = lstsize;
 	while (*b)
@@ -40,15 +39,17 @@ static void	ft_sort_four(t_push **a, t_push **b, int lstsize)
 	ft_sort_three(a);
 	ft_finish(a, b, lstsize);
 }
+
 static void	ft_sort_five(t_push **a, t_push **b, int lstsize)
 {
 	ft_push(b, a, "pb\n", 2);
 	ft_sort_three(a);
 	ft_finish(a, b, lstsize);
 }
+
 static void	ft_top_small(t_push **a, int lstsize)
 {
-	int	p;
+	int		p;
 
 	p = ft_find_small(a);
 	if (p == 0)
@@ -61,11 +62,9 @@ static void	ft_top_small(t_push **a, int lstsize)
 
 void	ft_sort_small(t_push **a, int lstsize)
 {
-	t_push *b;
+	t_push	*b;
 
 	b = NULL;
-	if (ft_issorted((*a)) == 0)
-		return ;
 	if (lstsize == 2)
 	{
 		if ((*a)->num > (*a)->next->num)

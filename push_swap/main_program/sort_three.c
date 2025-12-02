@@ -6,18 +6,51 @@
 /*   By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 17:30:00 by oel--mou          #+#    #+#             */
-/*   Updated: 2025/11/24 17:30:11 by oel--mou         ###   ########.fr       */
+/*   Updated: 2025/12/02 17:55:15 by oel--mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "push_swap.h"
+int	ft_range_decide(int lstsize)
+{
+	if (lstsize <= 20)
+		return (lstsize / 2);
+	else if (lstsize <= 100)
+		return (lstsize / 7);
+	else
+		return (lstsize / 15);
+}
+
+void	ft_advance_range(int *i, int *range, int lstsize)
+{
+	if ((*i) < lstsize)
+		(*i)++;
+	if ((*range) < lstsize)
+		(*range)++;
+}
+
+int	ft_give_p_index(t_push *lst, int index)
+{
+	int		i;
+	t_push	*tmp;
+
+	i = 0;
+	tmp = lst;
+	while (tmp)
+	{
+		if (tmp->my_index == index)
+			return (i);
+		tmp = tmp->next;
+		i++;
+	}
+	return (-1);
+}
 
 void	ft_sort_three(t_push **a)
 {
-	int	n1;
-	int	n2;
-	int	n3;
+	int		n1;
+	int		n2;
+	int		n3;
 
 	n1 = (*a)->num;
 	n2 = (*a)->next->num;

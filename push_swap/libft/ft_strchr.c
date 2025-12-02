@@ -6,7 +6,7 @@
 /*   By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 19:00:48 by oel--mou          #+#    #+#             */
-/*   Updated: 2025/10/23 11:45:11 by oel--mou         ###   ########.fr       */
+/*   Updated: 2025/11/25 15:15:32 by oel--mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strchr(const char *s, int c)
 	unsigned char	*tmp;
 	unsigned char	x;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	tmp = (unsigned char *)s;
 	x = (unsigned char)c;

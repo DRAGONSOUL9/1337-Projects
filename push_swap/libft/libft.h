@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: oussama <oussama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 12:30:05 by oel--mou          #+#    #+#             */
-/*   Updated: 2025/11/23 11:00:45 by oel--mou         ###   ########.fr       */
+/*   Updated: 2025/11/29 17:49:32 by oussama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int					ft_putnbr_fd(int n, int fd);
 
 // modded libft functions
 int					ft_atoi_new(const char *nptr, int *flag);
-char				*ft_itoa_new(int n, int base, int my_size);
+char				*ft_itoa_base(int n, int base, int my_size);
 
 // bonus
 // t_list				*ft_lstnew(void *content);

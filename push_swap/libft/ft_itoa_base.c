@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_new.c                                      :+:      :+:    :+:   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: oussama <oussama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 16:39:34 by oel--mou          #+#    #+#             */
-/*   Updated: 2025/11/22 17:57:17 by oel--mou         ###   ########.fr       */
+/*   Updated: 2025/11/29 17:49:11 by oussama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static char	*ft_creat_str(long n, int sign, int size, int base)
 {
 	char	*str;
 	char	*base_str;
-	
+
 	base_str = "0123456789abcdef";
 	str = ft_calloc(sign + size + 1, 1);
 	if (!str)
@@ -47,7 +47,7 @@ static char	*ft_creat_str(long n, int sign, int size, int base)
 	return (str);
 }
 
-char	*ft_itoa_new(int n, int base, int size)
+char	*ft_itoa_base(int n, int base, int size)
 {
 	long	x;
 	char	*str;

@@ -6,7 +6,7 @@
 /*   By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:20:50 by oel--mou          #+#    #+#             */
-/*   Updated: 2025/10/18 17:54:43 by oel--mou         ###   ########.fr       */
+/*   Updated: 2025/12/01 14:47:27 by oel--mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,11 +86,16 @@ static char	**ft_fill_arr(char const *s, char c, char **result)
 
 char	**ft_split(char const *s, char c)
 {
+	int		words;
 	char	**result;
 
 	if (!s)
 		return (NULL);
-	result = malloc(sizeof(char *) * (ft_word_count(s, c) + 1));
+	words = 0;
+	words = ft_word_count(s, c);
+	if (words == 0)
+		return (NULL);
+	result = malloc(sizeof(char *) * (words + 1));
 	if (!result)
 		return (NULL);
 	result = ft_fill_arr(s, c, result);

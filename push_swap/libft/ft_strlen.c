@@ -6,7 +6,7 @@
 /*   By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 14:43:37 by oel--mou          #+#    #+#             */
-/*   Updated: 2025/10/14 19:14:19 by oel--mou         ###   ########.fr       */
+/*   Updated: 2025/12/01 14:20:58 by oel--mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	len;
 
+	if (!s)
+		return (0);
 	len = 0;
 	while (s[len])
 		len++;

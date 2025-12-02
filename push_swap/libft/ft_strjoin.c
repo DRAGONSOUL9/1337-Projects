@@ -6,7 +6,7 @@
 /*   By: oel--mou <oel--mou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 10:34:10 by oel--mou          #+#    #+#             */
-/*   Updated: 2025/10/19 11:37:21 by oel--mou         ###   ########.fr       */
+/*   Updated: 2025/11/25 15:11:12 by oel--mou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	size_t	size;
 
+	if (s1 && !s2)
+		return (ft_strdup(s1));
+	if (!s1 && s2)
+		return (ft_strdup(s2));
 	if (!s1 || !s2)
 		return (NULL);
 	size = ft_strlen(s1) + ft_strlen(s2);
