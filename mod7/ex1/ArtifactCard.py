@@ -15,7 +15,7 @@ class ArtifactCard(Card):
         return game_state
 
     def activate_ability(self) -> dict:
-        pass
+        return {'card': self.name, 'status': 'active'}
 
     def card_name_type(self):
         try:
