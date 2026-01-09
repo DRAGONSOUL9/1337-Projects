@@ -45,6 +45,8 @@ def create_station(station_data: dict) -> SpaceStation:
         print("Expected validation error:",
               lst[0]['msg'], sep='\n')
         return None
+    except KeyError as msg:
+        print(f"This key ({msg}) is Wrong double check")
 
 
 def main():
